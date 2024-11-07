@@ -8,9 +8,9 @@
             "exec_mode"  : "cluster", //集群模式，最大提升网站并发
             "env" : {
                 "NODE_ENV" : "production",
-                "PORT" : 3000,
+                "PORT" : 3088,
                 "CONFIG_FILE" : "/path/to/production/config.js"
-                
+
                 // Must set add config when STORAGE_TYPE is upyun
                 // "STORAGE_TYPE" : "upyun",
                 // "DOWNLOAD_URL" : "",

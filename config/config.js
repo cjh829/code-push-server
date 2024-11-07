@@ -59,7 +59,7 @@ config.development = {
     // Binary files storage dir, Do not use tmpdir and it's public download dir.
     storageDir: process.env.STORAGE_DIR || "/Users/tablee/workspaces/storage",
     // Binary files download host address which Code Push Server listen to. the files storage in storageDir.
-    downloadUrl: process.env.LOCAL_DOWNLOAD_URL || "http://127.0.0.1:3000/download",
+    downloadUrl: process.env.LOCAL_DOWNLOAD_URL || "http://127.0.0.1:3088/download",
     // public static download spacename.
     public: '/download'
   },

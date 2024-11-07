@@ -7,7 +7,7 @@ services:
       - data-tmp:/data/tmp
       - ./config.js:/config.js
     environment:
-      DOWNLOAD_URL: "http://YOU_MACHINE_IP:3000/download"
+      DOWNLOAD_URL: "http://YOU_MACHINE_IP:3088/download"
       MYSQL_HOST: "YOU_MACHINE_IP"
       MYSQL_PORT: "3308"
       MYSQL_USERNAME: "codepush"
@@ -27,7 +27,7 @@ services:
       restart_policy:
         condition: on-failure
     ports:
-      - "3000:3000"
+      - "3088:3088"
     networks:
       - servernet
     depends_on:

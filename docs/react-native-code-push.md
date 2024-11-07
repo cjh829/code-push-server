@@ -50,7 +50,7 @@ $ react-native link react-native-code-push  #连接到项目中，提示输入�
 基于code-push-server服务
 
 ```shell
-$ code-push login http://YOUR_CODE_PUSH_SERVER_IP:3000  #浏览器中登录获取token，用户名:admin, 密码:123456
+$ code-push login http://YOUR_CODE_PUSH_SERVER_IP:3088  #浏览器中登录获取token，用户名:admin, 密码:123456
 $ code-push app add CodePushDemoiOS ios react-native #创建iOS版, 获取Production DeploymentKey
 $ code-push app add CodePushDemoAndroid android react-native #创建android版，获取获取Production DeploymentKey
 ```
@@ -63,7 +63,7 @@ $ code-push app add CodePushDemoAndroid android react-native #创建android版�
 
 1. `CodePushDeploymentKey`值设置为CodePushDemo-ios的Production DeploymentKey值。
 
-2. `CodePushServerURL`值设置为code-push-server服务地址 http://YOUR_CODE_PUSH_SERVER_IP:3000/ 不在同一台机器的时候，请将YOUR_CODE_PUSH_SERVER_IP改成外网ip或者域名地址。
+2. `CodePushServerURL`值设置为code-push-server服务地址 http://YOUR_CODE_PUSH_SERVER_IP:3088/ 不在同一台机器的时候，请将YOUR_CODE_PUSH_SERVER_IP改成外网ip或者域名地址。
 
 3. 将默认版本号1.0改成三位1.0.0
 
@@ -82,7 +82,7 @@ $ code-push app add CodePushDemoAndroid android react-native #创建android版�
 
 1. `YourKey`替换成CodePushDemo-android的Production DeploymentKey值
 
-2. `YourCodePushServerUrl`值设置为code-push-server服务地址 http://YOUR_CODE_PUSH_SERVER_IP:3000/ 不在同一台机器的时候，请将YOUR_CODE_PUSH_SERVER_IP改成外网ip或者域名地址。
+2. `YourCodePushServerUrl`值设置为code-push-server服务地址 http://YOUR_CODE_PUSH_SERVER_IP:3088/ 不在同一台机器的时候，请将YOUR_CODE_PUSH_SERVER_IP改成外网ip或者域名地址。
 
 3. 将默认版本号1.0改成三位1.0.0
 
