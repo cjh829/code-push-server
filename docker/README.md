@@ -39,17 +39,42 @@ $ git clone https://github.com/lisong/code-push-server.git
 $ cd code-push-server/docker
 ```
 
+## 注意:以下處理docker如果報image無法解析的話 先下一次指令拉回來，再跑相關命令
+```shell
+  docker pull [image名:tag]
+```
+
+## 自己build docker file (因為有改port)
+```shell
+$ cd code-push-server
+$ sudo docker build . -t code-push-server
+$ cd .. //build完退回前目錄
+```
+
 ## 修改配置文件
 
 ```shell
 $ vim docker-compose.yml
 ```
+*image 改為 剛才build好的*
+```shell
+  server:
+    image: code-push-server
+```
+*如果是mac m2/m1，因為架構問題裝不了mysql@5.7.23，換成支持的image*
+```shell
+  db:
+    image: biarms/mysql:5.7
+```
+
 
 *将`DOWNLOAD_URL`中`YOU_MACHINE_IP`替换成本机外网ip或者域名*
 
 *将`MYSQL_HOST`中`YOU_MACHINE_IP`替换成本机内网ip*
 
 *将`REDIS_HOST`中`YOU_MACHINE_IP`替换成本机内网ip*
+
+# 注意!!!!上面這些 YOU_MACHINE_IP 很重要，看清楚按照要求配置，不要亂配(絕對不是用127.0.0.1，因為三個服務都是自己一台虛擬機，用127.0.0.1會摸不到彼此，還會造成server啟動失敗!!)
 
 ## jwt.tokenSecret修改
 
